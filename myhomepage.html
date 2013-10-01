@@ -34,10 +34,11 @@
 	overflow: hidden;
 }
 .contain{
+	position: absolute;
 	background-color: rgb(68, 68, 68);
 	width:250px;
 	height: 250px;
-	float:left;
+	margin: 100px 0 0 400px;
 	
 }
 #aboutother{
@@ -46,19 +47,23 @@
 	height:130px;
 	width: 500px;
     margin: 250px 0 0 400px;
-    background-image: url("blog.gif");
+    background-color: rgb(27, 34, 36);
 
 }
 #aboutgithub{
 	width:250px;
 	height: 250px;
-	float:left;
+	position: absolute;
+	margin: 0 0 0 650px;
 	background-image: url("github.jpg");
 	opacity: 0.2;
 }
 #towerjpg{
-
+	width: 80px;
+    height: 70px;
 	background-image: url("tower.png");
+	margin-left: 50px;
+	margin-top:50px;
 }
 .menu{
 	position: absolute;
@@ -76,20 +81,26 @@ position:absolute;
 #abouttower{
 	width:250px;
 	height:150px;
-}
-#towerjpg{
-	width:250px;
-	height: 50px;
+	background-color: rgb(71, 84, 90);
+	overflow: hidden;
 }
 #towername{
-	width: 250px;
+	position: absolute;
+	margin-left: 110px;
+	margin-top:-60px;
+	width: 150px;
+	font-family: "nexa_heavyregular",sans-serif;
+	color: rgb(255, 255, 255);
+	font-size: 22px;
+	text-align:left;
+
 }
 #aboutblog{
 	width: 250px;
 	height: 100px;
 	overflow:hidden;
 	position: absolute;
-	margin: 150px 0 0 400px;
+	margin: 0 0 0 400px;
 	z-index: 1;
 }
 #blogjpg{
@@ -102,7 +113,7 @@ margin-top: 15px;
 margin-right:5px;
 }
 .content{
-width: 140px;
+width: 145px;
 margin-left: 20px;
 font-family: "nexa_heavyregular",sans-serif;
 font-size: 19px;
@@ -112,7 +123,7 @@ overflow:hidden;
 }
 #dicribblog{
 font-family: 'nexa_blackregular',sans-serif;
-font-size: 9px;
+font-size: 11px;
 color: rgb(255, 255, 255);
 margin-top: -6px;
 margin-right: -9px;
@@ -120,7 +131,11 @@ margin-right: -9px;
 .blogspan{
 display: block;
 margin-right: 10px;
-margin-top: 10px
+margin-top: 15px;
+font-family: "nexa_heavyregular",sans-serif;
+	color: rgb(255, 255, 255);
+	font-size: 22px;
+	text-align:left;
 }
 
 #colour_blog{
@@ -133,7 +148,7 @@ width: 250px;
 height: 100px;
 overflow:hidden;
 position: absolute;
-margin: 150px 0 0 400px;
+margin: 0 0 0 400px;
 z-index: 0;
 
 }
@@ -146,8 +161,10 @@ z-index: 0;
 }
 #aboutme_intro_pic{
 	position: absolute;
-	width: 50px;
-	height:50px;
+	margin-left: 70px;
+	margin-top:160px;
+	width: 70px;
+	height:70px;
 	background-image: url("aboutme.png");
 	z-index: 100;
 }
@@ -160,11 +177,39 @@ z-index: 0;
 	z-index: 99;
 	transform: rotate(10deg);
 }
+.text_sum{
+	position: absolute;
+	z-index: 100;
+	font-family: "nexa_heavyregular",sans-serif;
+	color: rgb(255, 255, 255);
+	font-size: 22px;
+	text-align:left;
+}
+.text_dec{
+	color: rgb(0, 242, 129);
+	font-size: 12px;
+	margin-top: -10px;
+	margin-left:2px;
+}
+.text_aboutme{
+	margin-left: 145px;
+	margin-top: 170px;
+}
+.text_github{
+	margin-left: 90px;
+	margin-top: 100px;
+}
+#other_blue{
+	width:90px;
+	background-color: rgb(0, 242, 129);
+	height:130px;
+}
+#other_black{
+
+}
+
 	</style>
 <body>
-
-	
-
 	<div class="div1">
 <div class="title">
 <ul class="menu">
@@ -200,6 +245,10 @@ z-index: 0;
 
 <a><div id="aboutme">
 	<div id="aboutme_intro_pic"></div>
+<div class="text_sum text_aboutme">
+	About Me
+	<div class="text_dec">STATE OF MIND</div>
+</div>
    <div id="aboutme_cover"></div>
 
 </div></a>
@@ -207,7 +256,12 @@ z-index: 0;
 <div class="contain">
 <a><div id="abouttower">
 <div id="towerjpg"></div>
-<div id="towername">我的团队</div>
+<div id="towername">
+     MY TEAM
+     <div class="text_dec">
+     	TOWER.IM
+     </div>
+</div>
 </div></a>
 </div>
 <a>
@@ -215,8 +269,8 @@ z-index: 0;
 <div class="content">
 <div id="blogjpg"></div>
 <span class="blogspan"> 
-	Blog</span>
-<div id="dicribblog">我的博客</div>
+	BLOG</span>
+<div id="dicribblog">technology</div>
 </div>
 </div>
 </a>
@@ -224,9 +278,21 @@ z-index: 0;
 <div id="backfround_blog">
 <div id="colour_blog"></div>
 </div>
-<div id="covergithub">我的github</div>
+<div id="covergithub">
+<div class="text_sum text_github">
+Github
+<div class="text_dec">
+	WORKS
+	</div>
+</div>
+</div>
 <a><div id="aboutgithub"></div></a>
-<a><div id="aboutother"></div></a>
+<a><div id="aboutother">
+<div id="other_blue">
+</div>
+<div id="other_black">
+	</div>
+</div></a>
 </div>
 <div>
 <script src="jquery-1.6.4.min.js"></script>
