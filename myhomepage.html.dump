@@ -207,7 +207,7 @@ z-index: 0;
 <div class="contain">
 <a><div id="abouttower">
 <div id="towerjpg"></div>
-<div id="towername">我的团队</div>
+<div id="towername">鎴戠殑鍥㈤槦</div>
 </div></a>
 </div>
 <a>
@@ -216,7 +216,7 @@ z-index: 0;
 <div id="blogjpg"></div>
 <span class="blogspan"> 
 	Blog</span>
-<div id="dicribblog">我的博客</div>
+<div id="dicribblog">鎴戠殑鍗氬</div>
 </div>
 </div>
 </a>
@@ -224,7 +224,7 @@ z-index: 0;
 <div id="backfround_blog">
 <div id="colour_blog"></div>
 </div>
-<div id="covergithub">我的github</div>
+<div id="covergithub">鎴戠殑github</div>
 <a><div id="aboutgithub"></div></a>
 <a><div id="aboutother"></div></a>
 </div>
