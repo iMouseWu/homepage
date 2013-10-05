@@ -1,7 +1,11 @@
 <html>
 <title>
 	</title>
+	<link href="bootstrap.min.css" rel="stylesheet" media="screen">
 	<style type="text/css">
+	a:link {
+ text-decoration: none;
+}
 	body{
 		padding: 0px;
 		margin: 0px;
@@ -13,6 +17,7 @@
 	height: 100%;
     background-image: url("bg1.jpg");
     z-index: 100;
+    overflow: hidden;
 }
 .title{
 	width: 900px;
@@ -22,7 +27,7 @@
 .intro{
 	width: 900px;
 	height: 380px;
-	margin: 20px auto;
+	margin: 20px 180px 0 180px;
 }
 #aboutme{
 	background-color: white;
@@ -41,15 +46,6 @@
 	margin: 100px 0 0 400px;
 	
 }
-#aboutother{
-	position: absolute;
-	background-color: red;
-	height:130px;
-	width: 500px;
-    margin: 250px 0 0 400px;
-    background-color: rgb(27, 34, 36);
-
-}
 #aboutgithub{
 	width:250px;
 	height: 250px;
@@ -59,7 +55,7 @@
 	opacity: 0.2;
 }
 #towerjpg{
-	width: 80px;
+	width: 75px;
     height: 70px;
 	background-image: url("tower.png");
 	margin-left: 50px;
@@ -67,7 +63,7 @@
 }
 .menu{
 	position: absolute;
-	margin:100px 0 0 640px;
+	margin:100px 0 0 620px;
 }
 .menu li{
 	list-style-type:none;
@@ -85,15 +81,29 @@ position:absolute;
 	overflow: hidden;
 }
 #towername{
+	transition: transform 1s,font-size 1s;
+    -moz-transition: -moz-transform 2s,font-size 2s;	/* Firefox 4 */
+    -webkit-transition: -webkit-transform 2s,font-size 2s;	/* Safari ºÍ Chrome */
+    -o-transition: -o-transform 2s,font-size 2s;
 	position: absolute;
-	margin-left: 110px;
+	margin-left: 113px;
 	margin-top:-60px;
-	width: 150px;
+	width: 120px;
+	height: 60px;
 	font-family: "nexa_heavyregular",sans-serif;
 	color: rgb(255, 255, 255);
 	font-size: 22px;
 	text-align:left;
-
+}
+#towername:hover{
+	font-size: 25px;
+	transform:rotate(360deg);
+    -moz-transform:rotate(360deg); /* Firefox 4 */
+    -webkit-transform:rotate(360deg); /* Safari and Chrome */
+    -o-transform:rotate(360deg); /* Opera */
+}
+#tower_im{
+	font-size: 40%;
 }
 #aboutblog{
 	width: 250px;
@@ -113,7 +123,7 @@ margin-top: 15px;
 margin-right:5px;
 }
 .content{
-width: 145px;
+width: 155px;
 margin-left: 20px;
 font-family: "nexa_heavyregular",sans-serif;
 font-size: 19px;
@@ -125,19 +135,24 @@ overflow:hidden;
 font-family: 'nexa_blackregular',sans-serif;
 font-size: 11px;
 color: rgb(255, 255, 255);
-margin-top: -6px;
-margin-right: -9px;
+width: auto;
+height: 10px;
+margin-top: -5px;
 }
-.blogspan{
-display: block;
-margin-right: 10px;
+.blogdiv{
 margin-top: 15px;
 font-family: "nexa_heavyregular",sans-serif;
 	color: rgb(255, 255, 255);
 	font-size: 22px;
 	text-align:left;
-}
+	margin-right: 5px
 
+}
+#blog_text{
+	position: absolute;
+	margin-left: 70px;
+
+}
 #colour_blog{
 width: 250px;
 height: 100px;
@@ -175,7 +190,10 @@ z-index: 0;
 	height:550px; 
 	background-color: rgb(27, 34, 36);
 	z-index: 99;
-	transform: rotate(10deg);
+	transform:rotate(20deg);
+    -moz-transform:rotate(20deg); /* Firefox 4 */
+    -webkit-transform:rotate(20deg); /* Safari and Chrome */
+    -o-transform:rotate(20deg); /* Opera */
 }
 .text_sum{
 	position: absolute;
@@ -188,7 +206,7 @@ z-index: 0;
 .text_dec{
 	color: rgb(0, 242, 129);
 	font-size: 12px;
-	margin-top: -10px;
+	margin-top: -5px;
 	margin-left:2px;
 }
 .text_aboutme{
@@ -199,43 +217,162 @@ z-index: 0;
 	margin-left: 90px;
 	margin-top: 100px;
 }
-#other_blue{
-	width:90px;
-	background-color: rgb(0, 242, 129);
+#aboutother{
+	position: absolute;
+	background-color: red;
 	height:130px;
+	width: 500px;
+    margin: 250px 0 0 400px;
+    background-color: rgb(27, 34, 36);
 }
-#other_black{
-
+#other_right{
+	position: absolute;
+	margin-left: 390px;
+	width:110px;
+	height:130px;
+	overflow: hidden;
+}
+#other_right_pic{
+	position: absolute;
+	margin-top: 30px;
+	margin-left: 15px;
+	width: 70px;
+	height: 70px;
+	background-image: url("jinghong.png");
+	z-index: 100;
+}
+#other_right_cover{
+	margin-top: 130px;
+	position: absolute;
+	width: 110px;
+	height: 130px;
+	background-color: rgb(0,242,129);
+	z-index: 99;
+}
+#other_left{
+	position: absolute;
+	width:390px;
+	height: 130px;
+	overflow: hidden;
+}
+#other_left_cover{
+	position: absolute;
+	width: 390px;
+	height: 130px;
+	background-color: rgb(0,242,129);
+	z-index: 99;
 }
 
+
+.other_left_text{
+	position: absolute;
+	margin-left: 150px;
+	margin-top: 50px;
+}
+#other_left_inner_text{
+	color: rgb(0, 0, 0);
+}
+input[type="text"]{
+	background-color: rgb(37, 45, 48);
+	border: none;
+	margin: 0px;
+	width: 550px;
+	height: 40px;
+	color: rgb(0, 242, 129);
+    font-size: 14px;
+    font-family: "nexa_heavyregular",sans-serif;
+}
+input[type="submit"]{
+	background-color: rgb(0, 242, 129);
+	border: none;
+	margin: 0px;
+	width: 85px;
+	height: 50px;
+	font-family: "nexa_heavyregular",sans-serif;
+	color: black;
+}
+input[type="reset"]{
+	background-color: rgb(0, 0, 0);
+	border: none;
+	margin: 0px;
+	width: 60px;
+	height: 50px;
+	font-family: "nexa_heavyregular",sans-serif;
+	color: rgb(0, 242, 129);
+}
+.mail_textarea{
+	background-color: rgb(37, 45, 48);
+	border: none;
+	width: 700px;
+	margin-top: 10px;
+	color: rgb(117, 137, 143);
+    font-size: 11px;
+    font-family: "nexa_heavyregular",sans-serif;
+}
+.view_mail{
+	position: absolute;
+	margin-left: 100%;
+	margin-top: 200px;
+	top: 0px;
+	background-image: url("mail_background.jpg");
+	background-size:100% 100%;
+}
+#back_home{
+	position: absolute;
+	width: 37px;
+	height: 38px;
+	margin-left: 660px;
+	background-image: url("back.jpg");
+}
+#mail_tips{
+	color: rgb(31, 37, 40);
+	font-size: 11px;
+	font-family: "nexa_heavyregular",sans-serif;
+	position: absolute;
+	left: 400px;
+	top:280px;
+}
+#mail_mymail{
+	position: absolute;
+	color: rgb(31, 37, 40);
+	font-size: 11px;
+	font-family: "nexa_heavyregular",sans-serif;
+	background-position: left ;
+    background-repeat: no-repeat;
+    background-image: url("smallemail.png");
+    width: 170px;
+    text-align: right;
+    left: 400px;
+	top:300px;
+}
 	</style>
 <body>
 	<div class="div1">
 <div class="title">
 <ul class="menu">
-<li style="width:29px">
-	<a href="">
-		<img src="QQ1.png" class="icon" style="bottom: 0px; display: inline; opacity: 1;">
+<li style="width:34px;height:36px">
+	<a href="http://user.qzone.qq.com/2159201/">
+		<img src="QQ1.png" class="icon" style="bottom: 20px; display: inline; opacity: 1;">
 		<img src="QQ.png" class="hover-icon" style="bottom: 150px; display: none; opacity: 1;">
 	</a>
 </li>
-<li style="width:45px">
-	<a href="">
-		<img src="renren.png" class="icon" style="bottom: 0px; display: inline; opacity: 1;">
+<li style="width:51px;height:36px">
+	<a href="http://www.renren.com/283112260/profile">
+		<img src="renren.png" class="icon" style="bottom: 20px; display: inline; opacity: 1;">
 		<img src="renren1.png" class="hover-icon" style="bottom: 150px; display: none; opacity: 1;">
-	</a>
+</a>
 </li>
-<li style="width:29px">
-	<a href="">
-		<img src="weibo.png" class="icon" style="bottom: 0px; display: inline; opacity: 1;">
+<li style="width:35px;height:36px">
+<a href="http://weibo.com/u/3056180917">
+		<img src="weibo.png" class="icon" style="bottom: 20px; display: inline; opacity: 1;">
 		<img src="weibo1.png" class="hover-icon" style="bottom: 150px; display: none; opacity: 1;">
 	</a>
 </li>
-<li style="width:29px">
-	<a href="">
-		<img src="mail.png" class="icon" style="bottom: 0px; display: inline; opacity: 1;">
+<li style="width:38px;height:36px">
+<a id="mail_a" href="#">
+		<img src="mail.png" class="icon" style="bottom: 20px; display: inline; opacity: 1;">
 		<img src="mail1.png" class="hover-icon" style="bottom: 150px; display: none; opacity: 1;">
-	</a>
+</a>
 	</li>
 </ul>
 </div>
@@ -243,7 +380,7 @@ z-index: 0;
 
 <div class="intro">
 
-<a><div id="aboutme">
+<a href="www.imousewu.com"><div id="aboutme">
 	<div id="aboutme_intro_pic"></div>
 <div class="text_sum text_aboutme">
 	About Me
@@ -254,23 +391,26 @@ z-index: 0;
 </div></a>
 
 <div class="contain">
-<a><div id="abouttower">
+<a href="www.tower.im">
+	<div id="abouttower">
 <div id="towerjpg"></div>
 <div id="towername">
      MY TEAM
-     <div class="text_dec">
+     <div class="text_dec" id="tower_im">
      	TOWER.IM
      </div>
 </div>
 </div></a>
 </div>
-<a>
+<a href="http://www.cnblogs.com/iMouseWu/">
 	<div id="aboutblog">
 <div class="content">
 <div id="blogjpg"></div>
-<span class="blogspan"> 
-	BLOG</span>
+<div id="blog_text">
+<div class="blogdiv"> 
+	BLOG</div>
 <div id="dicribblog">technology</div>
+</div>
 </div>
 </div>
 </a>
@@ -278,6 +418,7 @@ z-index: 0;
 <div id="backfround_blog">
 <div id="colour_blog"></div>
 </div>
+<a href="https://github.com/iMouseWu">
 <div id="covergithub">
 <div class="text_sum text_github">
 Github
@@ -286,49 +427,94 @@ Github
 	</div>
 </div>
 </div>
-<a><div id="aboutgithub"></div></a>
-<a><div id="aboutother">
-<div id="other_blue">
+</a>
+<div id="aboutgithub"></div>
+<a href="http://www.zjut.com/">
+	<div id="aboutother">
+<div id="other_right">
+	<div id="other_right_cover">
+	</div>
+	<div id="other_right_pic">
+	</div>
 </div>
-<div id="other_black">
+<div id="other_left">
+	<div class="text_sum other_left_text">
+		JINGHONG
+		<div class="text_dec " id="other_left_inner_text">
+			THE STRENGHTH OF TEAM
+		</div>
+	</div>
+	<div id="other_left_cover">
+	</div>
 	</div>
 </div></a>
 </div>
+<div class="view_mail">
+	<a href="#" id="back_home_a"><div id="back_home"></div></a>
+	<form action="" method="post">
+	<input type="text" class="mail_text" placeholder="YOUREMAIL"><br>
+	<input type="text" class="mail_text" placeholder="YOURNAME"><br>
+	<textarea rows="8" class="mail_textarea" placeholder="CONTENT"></textarea><br>
+	<input type="submit" value="submit">
+	<input type="reset" value="reset">
+	</form>
+	<div id="mail_tips">please leave me a message!
+		<span>i will reply soon...</span>
+	</div>
+	<div id="mail_mymail">
+		<span>wuhao7171@gmail.com</span>
+
+	</div>
 <div>
 <script src="jquery-1.6.4.min.js"></script>
 <script type="text/javascript">
     $(function(){
-    	$(".menu li a .icon").mouseover(function(){
-    		$(this).animate({'bottom':"-150px"},"fast");
-    		$(this).css('display',"none");
-    		$(this).next().animate({'bottom':"0px"},"fast");
-    		$(this).next().css('display',"inline");
-    		
-    		
+    	$(".menu li").mouseenter(function(){
+    		$(this).find(".icon").stop(true,false).animate({'bottom':"-150px"},"fast");
+    		$(this).find(".icon").css('display',"none");
+    		$(this).find(".hover-icon").stop(true,false).animate({'bottom':"20px"},"fast");
+    		$(this).find(".hover-icon").css('display',"inline");
+
     	});
-    	$(".menu li a .hover-icon").mouseout(function(){
-    		$(this).animate({'bottom':"150px"},"fast");
-    		$(this).css('display',"none");	
-    		$(this).prev().css('display',"inline");
-    		$(this).prev().animate({'bottom':"0"},"fast");	
+    	$(".menu li").mouseleave(function(){
+    		$(this).find(".hover-icon").stop(true,false).animate({'bottom':"150px"},"fast");
+    		$(this).find(".hover-icon").css('display',"none");
+    		$(this).find(".icon").stop(true,false).css('display',"inline");
+    		$(this).find(".icon").animate({'bottom':"20px"},"fast");
+
     	});
     	$("#aboutblog").hover(function(){
-    		$("#colour_blog").animate({'margin-left':"240px"});
+    		$("#colour_blog").stop(true,false).animate({'margin-left':"240px"});
     	},function(){
-    		$("#colour_blog").animate({'margin-left':"0px"});
+    		$("#colour_blog").stop(true,false).animate({'margin-left':"0px"});
     	});
     	$("#covergithub").hover(function(){
-    		$("#aboutgithub").animate({'opacity':"0.99"});
+    		$("#aboutgithub").stop(true,false).animate({'opacity':"0.99"});
     	},function(){
-    		$("#aboutgithub").animate({'opacity':"0.2"});
+    		$("#aboutgithub").stop(true,false).animate({'opacity':"0.2"});
     	});
     	$("#aboutme").hover(function(){
-    		$("#aboutme_cover").animate({'width':"550px"});
+    		$("#aboutme_cover").stop(true,false).animate({'width':"560px"});
     	},function(){
-    		$("#aboutme_cover").animate({'width':"20px"});
+    		$("#aboutme_cover").stop(true,false).animate({'width':"20px"});
     	});
-
-
+    	$("#other_right").hover(function(){
+    		$("#other_right_cover").stop(true,false).animate({'margin-top':"0px"});
+    		$("#other_left_cover").stop(true,false).animate({'margin-top':"130px"});
+    		$("#other_left_inner_text").css('color',"rgb(0, 242, 129)");
+    	},function(){
+    		$("#other_right_cover").stop(true,false).animate({'margin-top':"130px"});
+    		$("#other_left_cover").stop(true,false).animate({'margin-top':"0px"});
+    		$("#other_left_inner_text").css('color',"rgb(0, 0, 0)");
+    	});
+    	$("#mail_a").click(function(){
+    		$(".intro").animate({'margin-left':"-1000px",'opacity':"0"},"10000");
+    		$(".view_mail").animate({'margin-left':"300px"},"10000");
+    	});
+    	$("#back_home_a").click(function(){
+    		$(".view_mail").animate({'margin-left':"100%"},"10000");
+    		$(".intro").animate({'margin-left':"180px",'opacity':"1"},"10000");
+    	});
     });
 </script>
 
